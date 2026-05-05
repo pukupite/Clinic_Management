@@ -1,0 +1,66 @@
+CREATE DATABASE ClinicDB;
+
+USE ClinicDB;
+
+
+
+
+CREATE TABLE adminUser (
+    AdminId INT PRIMARY KEY IDENTITY(1,1),
+    Name VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) UNIQUE NOT NULL,
+    Phone VARCHAR(20),
+    Password VARCHAR(100) NOT NULL
+);
+
+
+
+INSERT INTO adminUser (Name, Email, Phone, Password)
+VALUES 
+('Niloy', 'niloy@gmail.com', '01711111111', 'niloy123'),
+
+('Puku', 'puku@gmail.com', '01822222222', 'puku123');
+
+
+select * from adminUser
+
+
+
+
+CREATE TABLE Doctor (
+    DoctorId INT PRIMARY KEY IDENTITY(1,1),
+    Name VARCHAR(100) NOT NULL,
+    Phone VARCHAR(20),
+    Email VARCHAR(100) UNIQUE NOT NULL,
+    Specialist VARCHAR(100),
+    Schedule VARCHAR(100),
+    Password VARCHAR(100) NOT NULL
+);
+
+INSERT INTO Doctor (Name, Phone, Email, Specialist, Schedule, Password)
+VALUES 
+('Dr. Rahim', '01711111111', 'rahim@gmail.com', 'Cardiology', 'Sat-Mon 10AM-2PM', '1234'),
+('Dr. Karina', '01822222222', 'karina@gmail.com', 'Dermatology', 'Sun-Tue 3PM-7PM', 'abcd');
+
+
+
+select * from Doctor
+
+
+
+CREATE TABLE Reciptionist (
+    ReciptionistId INT PRIMARY KEY IDENTITY(1,1),
+    Name VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) UNIQUE NOT NULL,
+    NID VARCHAR(30),
+    Phone VARCHAR(20),
+    Password VARCHAR(100) NOT NULL
+);
+
+
+
+
+INSERT INTO Reciptionist (Name, Email, NID, Phone, Password)
+VALUES 
+('Sumi Akter', 'sumi@gmail.com', '1990123456', '01711111111', '1234'),
+('Mitu Rahman', 'mitu@gmail.com', '1990556677', '01822222222', 'abcd');

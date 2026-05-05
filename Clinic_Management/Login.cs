@@ -28,22 +28,55 @@ namespace Clinic_Management
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            String Email = this.txtEmail.Text;
-            String Password = this.txtPass.Text;
+
+            String role = "Admin";
+            String UserInputedEmail = this.txtEmail.Text;
+            String UserInputedPassword = this.txtPass.Text;
 
 
-            //if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password))
+            //if (string.IsNullOrEmpty(UserInputedEmail) || string.IsNullOrEmpty(UserInputedPassword))
             //{
             //    MessageBox.Show("Please enter both email and password.");
             //    return;
             //}
+            
 
-            String role = "";
+            DataAccess da = new DataAccess();
+            string sqlAdminQuery = $"select * from adminUser where Email='{UserInputedEmail}' and Password='{UserInputedPassword}'";
+            DataTable dt = da.ExecuteQueryTable(sqlAdminQuery);
+
+            if (dt.Rows.Count > 0) {
+                role = "Admin";
+                MessageBox.Show("Login Success");
+            }
+            else
+            {
+                sqlAdminQuery = $"select * from Doctor where Email='{UserInputedEmail}' and Password='{UserInputedPassword}'";
+                if (dt.Rows.Count > 0)
+                {
+                    role = "Doctor";
+                    MessageBox.Show("Login Success");
+                }
+                else
+                {
+                    sqlAdminQuery = $"select * from Reciptionist where Email='{UserInputedEmail}' and Password='{UserInputedPassword}'";
+                    if (dt.Rows.Count > 0)
+                    {
+                        role = "Receptionist";
+                        MessageBox.Show("Login Success");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid email or password. Please try again.");
+
+
+                    }
+                }
+
+            }
 
             
-              role = "Admin";
-              role = "Doctor";
-              role = "Receptionist";
+
 
             this.Hide();
 
@@ -63,14 +96,15 @@ namespace Clinic_Management
                 ReceptionistDashboard receptionistDashboard = new ReceptionistDashboard(this);
                 receptionistDashboard.ShowDialog();                        
             }
-            else
-            {
-                MessageBox.Show("Invalid email or password. Please try again.");
-
-            }
+            
            
             this.Show();
             this.btnReset_Click(sender, e);
+
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

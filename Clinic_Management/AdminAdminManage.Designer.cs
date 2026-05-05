@@ -62,6 +62,7 @@
             this.txtAdminFilterEmail.Name = "txtAdminFilterEmail";
             this.txtAdminFilterEmail.Size = new System.Drawing.Size(169, 22);
             this.txtAdminFilterEmail.TabIndex = 3;
+            this.txtAdminFilterEmail.TextChanged += new System.EventHandler(this.txtAdminFilterEmail_TextChanged);
             // 
             // lblAdminFilterEmail
             // 
@@ -78,6 +79,7 @@
             this.txtAdminFilterId.Name = "txtAdminFilterId";
             this.txtAdminFilterId.Size = new System.Drawing.Size(123, 22);
             this.txtAdminFilterId.TabIndex = 1;
+            this.txtAdminFilterId.TextChanged += new System.EventHandler(this.txtAdminFilterId_TextChanged);
             // 
             // lblAdminFilterId
             // 
@@ -132,14 +134,25 @@
             // 
             // dgvAdminManageList
             // 
+            this.dgvAdminManageList.AllowUserToAddRows = false;
+            this.dgvAdminManageList.AllowUserToDeleteRows = false;
+            this.dgvAdminManageList.AllowUserToOrderColumns = true;
+            this.dgvAdminManageList.AllowUserToResizeRows = false;
+            this.dgvAdminManageList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAdminManageList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAdminManageList.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgvAdminManageList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAdminManageList.Location = new System.Drawing.Point(0, 53);
+            this.dgvAdminManageList.MultiSelect = false;
             this.dgvAdminManageList.Name = "dgvAdminManageList";
+            this.dgvAdminManageList.ReadOnly = true;
+            this.dgvAdminManageList.RowHeadersVisible = false;
             this.dgvAdminManageList.RowHeadersWidth = 51;
             this.dgvAdminManageList.RowTemplate.Height = 24;
+            this.dgvAdminManageList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAdminManageList.Size = new System.Drawing.Size(800, 338);
             this.dgvAdminManageList.TabIndex = 3;
+            this.dgvAdminManageList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdminManageList_CellClick);
             // 
             // AdminAdminManage
             // 

@@ -57,9 +57,10 @@
             this.pnlAddUpdateRecipBody.Controls.Add(this.lblAddUpdateAdminPass);
             this.pnlAddUpdateRecipBody.Controls.Add(this.lblAddUpdateAdminPhn);
             this.pnlAddUpdateRecipBody.Controls.Add(this.lblAddUpdateAdminTitle);
+            this.pnlAddUpdateRecipBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAddUpdateRecipBody.Location = new System.Drawing.Point(0, 0);
             this.pnlAddUpdateRecipBody.Name = "pnlAddUpdateRecipBody";
-            this.pnlAddUpdateRecipBody.Size = new System.Drawing.Size(800, 311);
+            this.pnlAddUpdateRecipBody.Size = new System.Drawing.Size(800, 400);
             this.pnlAddUpdateRecipBody.TabIndex = 5;
             this.pnlAddUpdateRecipBody.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAddUpdateRecipBody_Paint);
             // 
