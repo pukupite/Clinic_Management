@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddUpdateAdmin));
             this.pnlAddUpdateRecipBody = new System.Windows.Forms.Panel();
             this.txtAddUpdateAdminPhn = new System.Windows.Forms.TextBox();
             this.txtAddUpdateAdminPass = new System.Windows.Forms.TextBox();
@@ -47,7 +48,7 @@
             // 
             // pnlAddUpdateRecipBody
             // 
-            this.pnlAddUpdateRecipBody.BackColor = System.Drawing.SystemColors.Info;
+            this.pnlAddUpdateRecipBody.BackColor = System.Drawing.Color.AliceBlue;
             this.pnlAddUpdateRecipBody.Controls.Add(this.txtAddUpdateAdminPhn);
             this.pnlAddUpdateRecipBody.Controls.Add(this.txtAddUpdateAdminPass);
             this.pnlAddUpdateRecipBody.Controls.Add(this.txtAddUpdateAdminEmail);
@@ -60,121 +61,139 @@
             this.pnlAddUpdateRecipBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAddUpdateRecipBody.Location = new System.Drawing.Point(0, 0);
             this.pnlAddUpdateRecipBody.Name = "pnlAddUpdateRecipBody";
-            this.pnlAddUpdateRecipBody.Size = new System.Drawing.Size(800, 400);
+            this.pnlAddUpdateRecipBody.Size = new System.Drawing.Size(1182, 565);
             this.pnlAddUpdateRecipBody.TabIndex = 5;
             this.pnlAddUpdateRecipBody.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAddUpdateRecipBody_Paint);
             // 
             // txtAddUpdateAdminPhn
             // 
-            this.txtAddUpdateAdminPhn.Location = new System.Drawing.Point(316, 225);
+            this.txtAddUpdateAdminPhn.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddUpdateAdminPhn.Location = new System.Drawing.Point(551, 365);
             this.txtAddUpdateAdminPhn.Name = "txtAddUpdateAdminPhn";
-            this.txtAddUpdateAdminPhn.Size = new System.Drawing.Size(306, 22);
+            this.txtAddUpdateAdminPhn.Size = new System.Drawing.Size(306, 29);
             this.txtAddUpdateAdminPhn.TabIndex = 10;
             // 
             // txtAddUpdateAdminPass
             // 
-            this.txtAddUpdateAdminPass.Location = new System.Drawing.Point(316, 170);
+            this.txtAddUpdateAdminPass.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddUpdateAdminPass.Location = new System.Drawing.Point(551, 310);
             this.txtAddUpdateAdminPass.Name = "txtAddUpdateAdminPass";
-            this.txtAddUpdateAdminPass.Size = new System.Drawing.Size(306, 22);
+            this.txtAddUpdateAdminPass.Size = new System.Drawing.Size(306, 29);
             this.txtAddUpdateAdminPass.TabIndex = 8;
             // 
             // txtAddUpdateAdminEmail
             // 
-            this.txtAddUpdateAdminEmail.Location = new System.Drawing.Point(316, 117);
+            this.txtAddUpdateAdminEmail.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddUpdateAdminEmail.Location = new System.Drawing.Point(551, 257);
             this.txtAddUpdateAdminEmail.Name = "txtAddUpdateAdminEmail";
-            this.txtAddUpdateAdminEmail.Size = new System.Drawing.Size(306, 22);
+            this.txtAddUpdateAdminEmail.Size = new System.Drawing.Size(306, 29);
             this.txtAddUpdateAdminEmail.TabIndex = 7;
             // 
             // txtAddUpdateAdminName
             // 
-            this.txtAddUpdateAdminName.Location = new System.Drawing.Point(316, 67);
+            this.txtAddUpdateAdminName.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddUpdateAdminName.Location = new System.Drawing.Point(551, 207);
             this.txtAddUpdateAdminName.Name = "txtAddUpdateAdminName";
-            this.txtAddUpdateAdminName.Size = new System.Drawing.Size(306, 22);
+            this.txtAddUpdateAdminName.Size = new System.Drawing.Size(306, 29);
             this.txtAddUpdateAdminName.TabIndex = 6;
             // 
             // lblAddUpdateAdminName
             // 
             this.lblAddUpdateAdminName.AutoSize = true;
-            this.lblAddUpdateAdminName.Location = new System.Drawing.Point(131, 67);
+            this.lblAddUpdateAdminName.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddUpdateAdminName.Location = new System.Drawing.Point(349, 203);
             this.lblAddUpdateAdminName.Name = "lblAddUpdateAdminName";
-            this.lblAddUpdateAdminName.Size = new System.Drawing.Size(44, 16);
+            this.lblAddUpdateAdminName.Size = new System.Drawing.Size(79, 28);
             this.lblAddUpdateAdminName.TabIndex = 5;
             this.lblAddUpdateAdminName.Text = "Name";
             // 
             // lblAddUpdateAdminEmail
             // 
             this.lblAddUpdateAdminEmail.AutoSize = true;
-            this.lblAddUpdateAdminEmail.Location = new System.Drawing.Point(131, 120);
+            this.lblAddUpdateAdminEmail.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddUpdateAdminEmail.Location = new System.Drawing.Point(349, 256);
             this.lblAddUpdateAdminEmail.Name = "lblAddUpdateAdminEmail";
-            this.lblAddUpdateAdminEmail.Size = new System.Drawing.Size(41, 16);
+            this.lblAddUpdateAdminEmail.Size = new System.Drawing.Size(75, 28);
             this.lblAddUpdateAdminEmail.TabIndex = 4;
             this.lblAddUpdateAdminEmail.Text = "Email";
             // 
             // lblAddUpdateAdminPass
             // 
             this.lblAddUpdateAdminPass.AutoSize = true;
-            this.lblAddUpdateAdminPass.Location = new System.Drawing.Point(131, 176);
+            this.lblAddUpdateAdminPass.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddUpdateAdminPass.Location = new System.Drawing.Point(349, 312);
             this.lblAddUpdateAdminPass.Name = "lblAddUpdateAdminPass";
-            this.lblAddUpdateAdminPass.Size = new System.Drawing.Size(67, 16);
+            this.lblAddUpdateAdminPass.Size = new System.Drawing.Size(120, 28);
             this.lblAddUpdateAdminPass.TabIndex = 3;
             this.lblAddUpdateAdminPass.Text = "Password";
             // 
             // lblAddUpdateAdminPhn
             // 
             this.lblAddUpdateAdminPhn.AutoSize = true;
-            this.lblAddUpdateAdminPhn.Location = new System.Drawing.Point(131, 231);
+            this.lblAddUpdateAdminPhn.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddUpdateAdminPhn.Location = new System.Drawing.Point(349, 367);
             this.lblAddUpdateAdminPhn.Name = "lblAddUpdateAdminPhn";
-            this.lblAddUpdateAdminPhn.Size = new System.Drawing.Size(97, 16);
+            this.lblAddUpdateAdminPhn.Size = new System.Drawing.Size(184, 28);
             this.lblAddUpdateAdminPhn.TabIndex = 1;
             this.lblAddUpdateAdminPhn.Text = "Phone Number";
             // 
             // lblAddUpdateAdminTitle
             // 
             this.lblAddUpdateAdminTitle.AutoSize = true;
-            this.lblAddUpdateAdminTitle.Location = new System.Drawing.Point(290, 22);
+            this.lblAddUpdateAdminTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblAddUpdateAdminTitle.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddUpdateAdminTitle.Location = new System.Drawing.Point(488, 117);
             this.lblAddUpdateAdminTitle.Name = "lblAddUpdateAdminTitle";
-            this.lblAddUpdateAdminTitle.Size = new System.Drawing.Size(89, 16);
+            this.lblAddUpdateAdminTitle.Size = new System.Drawing.Size(241, 38);
             this.lblAddUpdateAdminTitle.TabIndex = 0;
             this.lblAddUpdateAdminTitle.Text = "Fill Admin Info";
             // 
             // pnlAddUpdateRecipFooter
             // 
-            this.pnlAddUpdateRecipFooter.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlAddUpdateRecipFooter.BackColor = System.Drawing.Color.CadetBlue;
             this.pnlAddUpdateRecipFooter.Controls.Add(this.btnAddUpdateAdminSave);
             this.pnlAddUpdateRecipFooter.Controls.Add(this.btnAddUpdateAdminCancel);
             this.pnlAddUpdateRecipFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlAddUpdateRecipFooter.Location = new System.Drawing.Point(0, 400);
+            this.pnlAddUpdateRecipFooter.Location = new System.Drawing.Point(0, 565);
             this.pnlAddUpdateRecipFooter.Name = "pnlAddUpdateRecipFooter";
-            this.pnlAddUpdateRecipFooter.Size = new System.Drawing.Size(800, 50);
+            this.pnlAddUpdateRecipFooter.Size = new System.Drawing.Size(1182, 88);
             this.pnlAddUpdateRecipFooter.TabIndex = 4;
+            this.pnlAddUpdateRecipFooter.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAddUpdateRecipFooter_Paint);
             // 
             // btnAddUpdateAdminSave
             // 
-            this.btnAddUpdateAdminSave.Location = new System.Drawing.Point(388, 10);
+            this.btnAddUpdateAdminSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAddUpdateAdminSave.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddUpdateAdminSave.Location = new System.Drawing.Point(634, 23);
             this.btnAddUpdateAdminSave.Name = "btnAddUpdateAdminSave";
-            this.btnAddUpdateAdminSave.Size = new System.Drawing.Size(138, 33);
+            this.btnAddUpdateAdminSave.Size = new System.Drawing.Size(165, 40);
             this.btnAddUpdateAdminSave.TabIndex = 1;
             this.btnAddUpdateAdminSave.Text = "Save";
-            this.btnAddUpdateAdminSave.UseVisualStyleBackColor = true;
+            this.btnAddUpdateAdminSave.UseVisualStyleBackColor = false;
             this.btnAddUpdateAdminSave.Click += new System.EventHandler(this.btnAddUpdateAdminSave_Click);
             // 
             // btnAddUpdateAdminCancel
             // 
-            this.btnAddUpdateAdminCancel.Location = new System.Drawing.Point(220, 10);
+            this.btnAddUpdateAdminCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAddUpdateAdminCancel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddUpdateAdminCancel.Location = new System.Drawing.Point(456, 23);
             this.btnAddUpdateAdminCancel.Name = "btnAddUpdateAdminCancel";
-            this.btnAddUpdateAdminCancel.Size = new System.Drawing.Size(131, 34);
+            this.btnAddUpdateAdminCancel.Size = new System.Drawing.Size(146, 40);
             this.btnAddUpdateAdminCancel.TabIndex = 0;
             this.btnAddUpdateAdminCancel.Text = "Cancel";
-            this.btnAddUpdateAdminCancel.UseVisualStyleBackColor = true;
+            this.btnAddUpdateAdminCancel.UseVisualStyleBackColor = false;
             this.btnAddUpdateAdminCancel.Click += new System.EventHandler(this.btnAddUpdateAdminCancel_Click);
             // 
             // AddUpdateAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1182, 653);
             this.Controls.Add(this.pnlAddUpdateRecipBody);
             this.Controls.Add(this.pnlAddUpdateRecipFooter);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "AddUpdateAdmin";
             this.Text = "Add-Update Admin";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddUpdateAdmin_FormClosing);

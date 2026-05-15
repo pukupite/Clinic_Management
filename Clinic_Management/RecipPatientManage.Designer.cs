@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecipPatientManage));
             this.pnlAddUpdateRecipBody = new System.Windows.Forms.Panel();
-            this.txtAddupdatePatientBlood = new System.Windows.Forms.TextBox();
+            this.cmbAddUpdateBooldGroup = new System.Windows.Forms.ComboBox();
             this.lblAddupdatePatientBlood = new System.Windows.Forms.Label();
             this.txtAddupdatePatientPhn = new System.Windows.Forms.TextBox();
             this.lblAddupdatePatientPhn = new System.Windows.Forms.Label();
@@ -52,7 +53,7 @@
             // pnlAddUpdateRecipBody
             // 
             this.pnlAddUpdateRecipBody.BackColor = System.Drawing.SystemColors.Info;
-            this.pnlAddUpdateRecipBody.Controls.Add(this.txtAddupdatePatientBlood);
+            this.pnlAddUpdateRecipBody.Controls.Add(this.cmbAddUpdateBooldGroup);
             this.pnlAddUpdateRecipBody.Controls.Add(this.lblAddupdatePatientBlood);
             this.pnlAddUpdateRecipBody.Controls.Add(this.txtAddupdatePatientPhn);
             this.pnlAddUpdateRecipBody.Controls.Add(this.lblAddupdatePatientPhn);
@@ -68,157 +69,193 @@
             this.pnlAddUpdateRecipBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAddUpdateRecipBody.Location = new System.Drawing.Point(0, 0);
             this.pnlAddUpdateRecipBody.Name = "pnlAddUpdateRecipBody";
-            this.pnlAddUpdateRecipBody.Size = new System.Drawing.Size(800, 400);
+            this.pnlAddUpdateRecipBody.Size = new System.Drawing.Size(1182, 579);
             this.pnlAddUpdateRecipBody.TabIndex = 3;
             // 
-            // txtAddupdatePatientBlood
+            // cmbAddUpdateBooldGroup
             // 
-            this.txtAddupdatePatientBlood.Location = new System.Drawing.Point(316, 283);
-            this.txtAddupdatePatientBlood.Name = "txtAddupdatePatientBlood";
-            this.txtAddupdatePatientBlood.Size = new System.Drawing.Size(306, 22);
-            this.txtAddupdatePatientBlood.TabIndex = 15;
+            this.cmbAddUpdateBooldGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAddUpdateBooldGroup.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAddUpdateBooldGroup.FormattingEnabled = true;
+            this.cmbAddUpdateBooldGroup.Items.AddRange(new object[] {
+            "A+",
+            "A-",
+            "B+",
+            "B-",
+            "O+",
+            "O-",
+            "AB+",
+            "AB-"});
+            this.cmbAddUpdateBooldGroup.Location = new System.Drawing.Point(516, 375);
+            this.cmbAddUpdateBooldGroup.Name = "cmbAddUpdateBooldGroup";
+            this.cmbAddUpdateBooldGroup.Size = new System.Drawing.Size(306, 30);
+            this.cmbAddUpdateBooldGroup.TabIndex = 15;
+            this.cmbAddUpdateBooldGroup.SelectedIndexChanged += new System.EventHandler(this.cmbAddUpdateBooldGroup_SelectedIndexChanged);
             // 
             // lblAddupdatePatientBlood
             // 
             this.lblAddupdatePatientBlood.AutoSize = true;
-            this.lblAddupdatePatientBlood.Location = new System.Drawing.Point(131, 289);
+            this.lblAddupdatePatientBlood.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddupdatePatientBlood.Location = new System.Drawing.Point(331, 375);
             this.lblAddupdatePatientBlood.Name = "lblAddupdatePatientBlood";
-            this.lblAddupdatePatientBlood.Size = new System.Drawing.Size(83, 16);
+            this.lblAddupdatePatientBlood.Size = new System.Drawing.Size(137, 25);
             this.lblAddupdatePatientBlood.TabIndex = 14;
             this.lblAddupdatePatientBlood.Text = "Blood Group";
             // 
             // txtAddupdatePatientPhn
             // 
-            this.txtAddupdatePatientPhn.Location = new System.Drawing.Point(316, 234);
+            this.txtAddupdatePatientPhn.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddupdatePatientPhn.Location = new System.Drawing.Point(516, 320);
             this.txtAddupdatePatientPhn.Name = "txtAddupdatePatientPhn";
-            this.txtAddupdatePatientPhn.Size = new System.Drawing.Size(306, 22);
+            this.txtAddupdatePatientPhn.Size = new System.Drawing.Size(306, 29);
             this.txtAddupdatePatientPhn.TabIndex = 13;
             // 
             // lblAddupdatePatientPhn
             // 
             this.lblAddupdatePatientPhn.AutoSize = true;
-            this.lblAddupdatePatientPhn.Location = new System.Drawing.Point(131, 240);
+            this.lblAddupdatePatientPhn.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddupdatePatientPhn.Location = new System.Drawing.Point(331, 326);
             this.lblAddupdatePatientPhn.Name = "lblAddupdatePatientPhn";
-            this.lblAddupdatePatientPhn.Size = new System.Drawing.Size(97, 16);
+            this.lblAddupdatePatientPhn.Size = new System.Drawing.Size(161, 25);
             this.lblAddupdatePatientPhn.TabIndex = 12;
             this.lblAddupdatePatientPhn.Text = "Phone Number";
             this.lblAddupdatePatientPhn.Click += new System.EventHandler(this.label1_Click);
             // 
             // cmbAddupdatePatientGender
             // 
+            this.cmbAddupdatePatientGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAddupdatePatientGender.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAddupdatePatientGender.FormattingEnabled = true;
             this.cmbAddupdatePatientGender.Items.AddRange(new object[] {
-            "Male Female"});
-            this.cmbAddupdatePatientGender.Location = new System.Drawing.Point(316, 140);
+            "Male ",
+            "Female"});
+            this.cmbAddupdatePatientGender.Location = new System.Drawing.Point(516, 226);
             this.cmbAddupdatePatientGender.Name = "cmbAddupdatePatientGender";
-            this.cmbAddupdatePatientGender.Size = new System.Drawing.Size(306, 24);
+            this.cmbAddupdatePatientGender.Size = new System.Drawing.Size(306, 30);
             this.cmbAddupdatePatientGender.TabIndex = 11;
-            this.cmbAddupdatePatientGender.Text = "Select Gender";
+            this.cmbAddupdatePatientGender.SelectedIndexChanged += new System.EventHandler(this.cmbAddupdatePatientGender_SelectedIndexChanged);
             // 
             // txtAddupdatePatientWeight
             // 
-            this.txtAddupdatePatientWeight.Location = new System.Drawing.Point(316, 187);
+            this.txtAddupdatePatientWeight.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddupdatePatientWeight.Location = new System.Drawing.Point(516, 273);
             this.txtAddupdatePatientWeight.Name = "txtAddupdatePatientWeight";
-            this.txtAddupdatePatientWeight.Size = new System.Drawing.Size(306, 22);
+            this.txtAddupdatePatientWeight.Size = new System.Drawing.Size(306, 29);
             this.txtAddupdatePatientWeight.TabIndex = 10;
             // 
             // txtAddupdatePatientAge
             // 
-            this.txtAddupdatePatientAge.Location = new System.Drawing.Point(316, 104);
+            this.txtAddupdatePatientAge.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddupdatePatientAge.Location = new System.Drawing.Point(516, 190);
             this.txtAddupdatePatientAge.Name = "txtAddupdatePatientAge";
-            this.txtAddupdatePatientAge.Size = new System.Drawing.Size(306, 22);
+            this.txtAddupdatePatientAge.Size = new System.Drawing.Size(306, 29);
             this.txtAddupdatePatientAge.TabIndex = 8;
             // 
             // txtAddupdatePatientName
             // 
-            this.txtAddupdatePatientName.Location = new System.Drawing.Point(316, 67);
+            this.txtAddupdatePatientName.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddupdatePatientName.Location = new System.Drawing.Point(516, 153);
             this.txtAddupdatePatientName.Name = "txtAddupdatePatientName";
-            this.txtAddupdatePatientName.Size = new System.Drawing.Size(306, 22);
+            this.txtAddupdatePatientName.Size = new System.Drawing.Size(306, 29);
             this.txtAddupdatePatientName.TabIndex = 6;
             // 
             // lblAddupdatePatientName
             // 
             this.lblAddupdatePatientName.AutoSize = true;
-            this.lblAddupdatePatientName.Location = new System.Drawing.Point(131, 67);
+            this.lblAddupdatePatientName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddupdatePatientName.Location = new System.Drawing.Point(331, 153);
             this.lblAddupdatePatientName.Name = "lblAddupdatePatientName";
-            this.lblAddupdatePatientName.Size = new System.Drawing.Size(44, 16);
+            this.lblAddupdatePatientName.Size = new System.Drawing.Size(70, 25);
             this.lblAddupdatePatientName.TabIndex = 5;
             this.lblAddupdatePatientName.Text = "Name";
             // 
             // lblAddupdatePatientAge
             // 
             this.lblAddupdatePatientAge.AutoSize = true;
-            this.lblAddupdatePatientAge.Location = new System.Drawing.Point(131, 110);
+            this.lblAddupdatePatientAge.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddupdatePatientAge.Location = new System.Drawing.Point(331, 196);
             this.lblAddupdatePatientAge.Name = "lblAddupdatePatientAge";
-            this.lblAddupdatePatientAge.Size = new System.Drawing.Size(32, 16);
+            this.lblAddupdatePatientAge.Size = new System.Drawing.Size(50, 25);
             this.lblAddupdatePatientAge.TabIndex = 3;
             this.lblAddupdatePatientAge.Text = "Age";
             // 
             // lblAddupdatePatientGender
             // 
             this.lblAddupdatePatientGender.AutoSize = true;
-            this.lblAddupdatePatientGender.Location = new System.Drawing.Point(131, 149);
+            this.lblAddupdatePatientGender.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddupdatePatientGender.Location = new System.Drawing.Point(331, 235);
             this.lblAddupdatePatientGender.Name = "lblAddupdatePatientGender";
-            this.lblAddupdatePatientGender.Size = new System.Drawing.Size(52, 16);
+            this.lblAddupdatePatientGender.Size = new System.Drawing.Size(86, 25);
             this.lblAddupdatePatientGender.TabIndex = 2;
             this.lblAddupdatePatientGender.Text = "Gender";
             // 
             // lblAddupdatePatientWeight
             // 
             this.lblAddupdatePatientWeight.AutoSize = true;
-            this.lblAddupdatePatientWeight.Location = new System.Drawing.Point(131, 193);
+            this.lblAddupdatePatientWeight.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddupdatePatientWeight.Location = new System.Drawing.Point(331, 279);
             this.lblAddupdatePatientWeight.Name = "lblAddupdatePatientWeight";
-            this.lblAddupdatePatientWeight.Size = new System.Drawing.Size(49, 16);
+            this.lblAddupdatePatientWeight.Size = new System.Drawing.Size(82, 25);
             this.lblAddupdatePatientWeight.TabIndex = 1;
             this.lblAddupdatePatientWeight.Text = "Weight";
             // 
             // lblAddupdatePatientInfoTitle
             // 
             this.lblAddupdatePatientInfoTitle.AutoSize = true;
-            this.lblAddupdatePatientInfoTitle.Location = new System.Drawing.Point(290, 22);
+            this.lblAddupdatePatientInfoTitle.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddupdatePatientInfoTitle.Location = new System.Drawing.Point(488, 80);
             this.lblAddupdatePatientInfoTitle.Name = "lblAddupdatePatientInfoTitle";
-            this.lblAddupdatePatientInfoTitle.Size = new System.Drawing.Size(92, 16);
+            this.lblAddupdatePatientInfoTitle.Size = new System.Drawing.Size(247, 36);
             this.lblAddupdatePatientInfoTitle.TabIndex = 0;
             this.lblAddupdatePatientInfoTitle.Text = "Fill Patient Info";
             // 
             // pnlAddUpdateRecipFooter
             // 
-            this.pnlAddUpdateRecipFooter.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlAddUpdateRecipFooter.BackColor = System.Drawing.Color.PaleGreen;
             this.pnlAddUpdateRecipFooter.Controls.Add(this.btnAddUpdatePatientSave);
             this.pnlAddUpdateRecipFooter.Controls.Add(this.btnAddUpdatePatientCancel);
             this.pnlAddUpdateRecipFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlAddUpdateRecipFooter.Location = new System.Drawing.Point(0, 400);
+            this.pnlAddUpdateRecipFooter.Location = new System.Drawing.Point(0, 579);
             this.pnlAddUpdateRecipFooter.Name = "pnlAddUpdateRecipFooter";
-            this.pnlAddUpdateRecipFooter.Size = new System.Drawing.Size(800, 50);
+            this.pnlAddUpdateRecipFooter.Size = new System.Drawing.Size(1182, 74);
             this.pnlAddUpdateRecipFooter.TabIndex = 2;
             // 
             // btnAddUpdatePatientSave
             // 
-            this.btnAddUpdatePatientSave.Location = new System.Drawing.Point(388, 10);
+            this.btnAddUpdatePatientSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnAddUpdatePatientSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddUpdatePatientSave.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddUpdatePatientSave.Location = new System.Drawing.Point(636, 18);
             this.btnAddUpdatePatientSave.Name = "btnAddUpdatePatientSave";
-            this.btnAddUpdatePatientSave.Size = new System.Drawing.Size(138, 33);
+            this.btnAddUpdatePatientSave.Size = new System.Drawing.Size(185, 42);
             this.btnAddUpdatePatientSave.TabIndex = 1;
             this.btnAddUpdatePatientSave.Text = "Save";
-            this.btnAddUpdatePatientSave.UseVisualStyleBackColor = true;
+            this.btnAddUpdatePatientSave.UseVisualStyleBackColor = false;
             this.btnAddUpdatePatientSave.Click += new System.EventHandler(this.btnAddUpdatePatientSave_Click);
             // 
             // btnAddUpdatePatientCancel
             // 
-            this.btnAddUpdatePatientCancel.Location = new System.Drawing.Point(220, 10);
+            this.btnAddUpdatePatientCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAddUpdatePatientCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddUpdatePatientCancel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddUpdatePatientCancel.Location = new System.Drawing.Point(408, 18);
             this.btnAddUpdatePatientCancel.Name = "btnAddUpdatePatientCancel";
-            this.btnAddUpdatePatientCancel.Size = new System.Drawing.Size(131, 34);
+            this.btnAddUpdatePatientCancel.Size = new System.Drawing.Size(173, 43);
             this.btnAddUpdatePatientCancel.TabIndex = 0;
             this.btnAddUpdatePatientCancel.Text = "Cancel";
-            this.btnAddUpdatePatientCancel.UseVisualStyleBackColor = true;
+            this.btnAddUpdatePatientCancel.UseVisualStyleBackColor = false;
             this.btnAddUpdatePatientCancel.Click += new System.EventHandler(this.btnAddUpdatePatientCancel_Click);
             // 
             // RecipPatientManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1182, 653);
             this.Controls.Add(this.pnlAddUpdateRecipBody);
             this.Controls.Add(this.pnlAddUpdateRecipFooter);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "RecipPatientManage";
             this.Text = "Patient Management";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RecipPatientManage_FormClosing);
@@ -246,7 +283,7 @@
         private System.Windows.Forms.ComboBox cmbAddupdatePatientGender;
         private System.Windows.Forms.TextBox txtAddupdatePatientPhn;
         private System.Windows.Forms.Label lblAddupdatePatientPhn;
-        private System.Windows.Forms.TextBox txtAddupdatePatientBlood;
         private System.Windows.Forms.Label lblAddupdatePatientBlood;
+        private System.Windows.Forms.ComboBox cmbAddUpdateBooldGroup;
     }
 }

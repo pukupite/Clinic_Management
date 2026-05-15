@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtAdminFilterEmail = new System.Windows.Forms.TextBox();
             this.lblAdminFilterEmail = new System.Windows.Forms.Label();
@@ -45,7 +46,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel1.Controls.Add(this.txtAdminFilterEmail);
             this.panel1.Controls.Add(this.lblAdminFilterEmail);
             this.panel1.Controls.Add(this.txtAdminFilterId);
@@ -58,71 +59,84 @@
             // 
             // txtAdminFilterEmail
             // 
-            this.txtAdminFilterEmail.Location = new System.Drawing.Point(371, 12);
+            this.txtAdminFilterEmail.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAdminFilterEmail.Location = new System.Drawing.Point(491, 13);
             this.txtAdminFilterEmail.Name = "txtAdminFilterEmail";
-            this.txtAdminFilterEmail.Size = new System.Drawing.Size(169, 22);
+            this.txtAdminFilterEmail.Size = new System.Drawing.Size(224, 28);
             this.txtAdminFilterEmail.TabIndex = 3;
             this.txtAdminFilterEmail.TextChanged += new System.EventHandler(this.txtAdminFilterEmail_TextChanged);
             // 
             // lblAdminFilterEmail
             // 
             this.lblAdminFilterEmail.AutoSize = true;
-            this.lblAdminFilterEmail.Location = new System.Drawing.Point(309, 15);
+            this.lblAdminFilterEmail.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminFilterEmail.Location = new System.Drawing.Point(415, 16);
             this.lblAdminFilterEmail.Name = "lblAdminFilterEmail";
-            this.lblAdminFilterEmail.Size = new System.Drawing.Size(41, 16);
+            this.lblAdminFilterEmail.Size = new System.Drawing.Size(68, 25);
             this.lblAdminFilterEmail.TabIndex = 2;
             this.lblAdminFilterEmail.Text = "Email";
             // 
             // txtAdminFilterId
             // 
-            this.txtAdminFilterId.Location = new System.Drawing.Point(78, 14);
+            this.txtAdminFilterId.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAdminFilterId.Location = new System.Drawing.Point(177, 14);
             this.txtAdminFilterId.Name = "txtAdminFilterId";
-            this.txtAdminFilterId.Size = new System.Drawing.Size(123, 22);
+            this.txtAdminFilterId.Size = new System.Drawing.Size(204, 28);
             this.txtAdminFilterId.TabIndex = 1;
             this.txtAdminFilterId.TextChanged += new System.EventHandler(this.txtAdminFilterId_TextChanged);
             // 
             // lblAdminFilterId
             // 
             this.lblAdminFilterId.AutoSize = true;
-            this.lblAdminFilterId.Location = new System.Drawing.Point(42, 16);
+            this.lblAdminFilterId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminFilterId.Location = new System.Drawing.Point(141, 16);
             this.lblAdminFilterId.Name = "lblAdminFilterId";
-            this.lblAdminFilterId.Size = new System.Drawing.Size(20, 16);
+            this.lblAdminFilterId.Size = new System.Drawing.Size(35, 25);
             this.lblAdminFilterId.TabIndex = 0;
             this.lblAdminFilterId.Text = "ID";
             // 
             // btnAdminDeleteAdmin
             // 
-            this.btnAdminDeleteAdmin.Location = new System.Drawing.Point(421, 18);
+            this.btnAdminDeleteAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAdminDeleteAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdminDeleteAdmin.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdminDeleteAdmin.Location = new System.Drawing.Point(582, 14);
             this.btnAdminDeleteAdmin.Name = "btnAdminDeleteAdmin";
-            this.btnAdminDeleteAdmin.Size = new System.Drawing.Size(177, 29);
+            this.btnAdminDeleteAdmin.Size = new System.Drawing.Size(184, 33);
             this.btnAdminDeleteAdmin.TabIndex = 3;
             this.btnAdminDeleteAdmin.Text = "Delete";
-            this.btnAdminDeleteAdmin.UseVisualStyleBackColor = true;
+            this.btnAdminDeleteAdmin.UseVisualStyleBackColor = false;
             this.btnAdminDeleteAdmin.Click += new System.EventHandler(this.btnAdminDeleteAdmin_Click);
             // 
             // btnAdminUpdateAdmin
             // 
-            this.btnAdminUpdateAdmin.Location = new System.Drawing.Point(220, 18);
+            this.btnAdminUpdateAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnAdminUpdateAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdminUpdateAdmin.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdminUpdateAdmin.Location = new System.Drawing.Point(381, 14);
             this.btnAdminUpdateAdmin.Name = "btnAdminUpdateAdmin";
-            this.btnAdminUpdateAdmin.Size = new System.Drawing.Size(170, 29);
+            this.btnAdminUpdateAdmin.Size = new System.Drawing.Size(177, 33);
             this.btnAdminUpdateAdmin.TabIndex = 2;
             this.btnAdminUpdateAdmin.Text = "Update";
-            this.btnAdminUpdateAdmin.UseVisualStyleBackColor = true;
+            this.btnAdminUpdateAdmin.UseVisualStyleBackColor = false;
             this.btnAdminUpdateAdmin.Click += new System.EventHandler(this.btnAdminUpdateAdmin_Click);
             // 
             // btnAdminAddNewAdmin
             // 
-            this.btnAdminAddNewAdmin.Location = new System.Drawing.Point(45, 18);
+            this.btnAdminAddNewAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnAdminAddNewAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdminAddNewAdmin.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdminAddNewAdmin.Location = new System.Drawing.Point(199, 14);
             this.btnAdminAddNewAdmin.Name = "btnAdminAddNewAdmin";
-            this.btnAdminAddNewAdmin.Size = new System.Drawing.Size(143, 29);
+            this.btnAdminAddNewAdmin.Size = new System.Drawing.Size(157, 33);
             this.btnAdminAddNewAdmin.TabIndex = 1;
             this.btnAdminAddNewAdmin.Text = "Add New";
-            this.btnAdminAddNewAdmin.UseVisualStyleBackColor = true;
+            this.btnAdminAddNewAdmin.UseVisualStyleBackColor = false;
             this.btnAdminAddNewAdmin.Click += new System.EventHandler(this.btnAdminAddNewAdmin_Click);
             // 
             // pnlAdminManageFooter
             // 
-            this.pnlAdminManageFooter.BackColor = System.Drawing.SystemColors.Info;
+            this.pnlAdminManageFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pnlAdminManageFooter.Controls.Add(this.btnAdminDeleteAdmin);
             this.pnlAdminManageFooter.Controls.Add(this.btnAdminUpdateAdmin);
             this.pnlAdminManageFooter.Controls.Add(this.btnAdminAddNewAdmin);
@@ -139,8 +153,17 @@
             this.dgvAdminManageList.AllowUserToOrderColumns = true;
             this.dgvAdminManageList.AllowUserToResizeRows = false;
             this.dgvAdminManageList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAdminManageList.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dgvAdminManageList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdminManageList.Cursor = System.Windows.Forms.Cursors.Arrow;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAdminManageList.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAdminManageList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAdminManageList.Location = new System.Drawing.Point(0, 53);
             this.dgvAdminManageList.MultiSelect = false;
@@ -149,9 +172,11 @@
             this.dgvAdminManageList.RowHeadersVisible = false;
             this.dgvAdminManageList.RowHeadersWidth = 51;
             this.dgvAdminManageList.RowTemplate.Height = 24;
+            this.dgvAdminManageList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvAdminManageList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAdminManageList.Size = new System.Drawing.Size(800, 338);
             this.dgvAdminManageList.TabIndex = 3;
+            this.dgvAdminManageList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdminManageList_CellClick_1);
             this.dgvAdminManageList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdminManageList_CellClick);
             // 
             // AdminAdminManage
@@ -165,6 +190,7 @@
             this.Name = "AdminAdminManage";
             this.Text = "Admin Management";
             this.Load += new System.EventHandler(this.AdminAdminManage_Load);
+            this.Shown += new System.EventHandler(this.AdminAdminManage_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlAdminManageFooter.ResumeLayout(false);

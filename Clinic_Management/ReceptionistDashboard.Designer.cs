@@ -28,78 +28,113 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReceptionistDashboard));
             this.pnlRecipNav = new System.Windows.Forms.Panel();
             this.lblRecipNavTitle = new System.Windows.Forms.Label();
             this.btnRecipLogout = new System.Windows.Forms.Button();
-            this.pnlRecipContentBody = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvRecepPatientList = new System.Windows.Forms.DataGridView();
+            this.pnlRecepFooter = new System.Windows.Forms.Panel();
             this.btnRecipDeletePatient = new System.Windows.Forms.Button();
             this.btnRecipAddPatient = new System.Windows.Forms.Button();
             this.btnRecipUpdatePatient = new System.Windows.Forms.Button();
             this.pnlRecipFilter = new System.Windows.Forms.Panel();
             this.lblRecipFilter = new System.Windows.Forms.Label();
-            this.txtRecipFilter = new System.Windows.Forms.TextBox();
+            this.txtRecipFilterSerial = new System.Windows.Forms.TextBox();
             this.lblRecipFilterPhn = new System.Windows.Forms.Label();
             this.txtRecipFilterPhn = new System.Windows.Forms.TextBox();
             this.pnlRecipNav.SuspendLayout();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecepPatientList)).BeginInit();
+            this.pnlRecepFooter.SuspendLayout();
             this.pnlRecipFilter.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlRecipNav
             // 
-            this.pnlRecipNav.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlRecipNav.BackColor = System.Drawing.Color.Teal;
             this.pnlRecipNav.Controls.Add(this.lblRecipNavTitle);
             this.pnlRecipNav.Controls.Add(this.btnRecipLogout);
-            this.pnlRecipNav.Location = new System.Drawing.Point(12, 12);
+            this.pnlRecipNav.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlRecipNav.Location = new System.Drawing.Point(0, 0);
             this.pnlRecipNav.Name = "pnlRecipNav";
-            this.pnlRecipNav.Size = new System.Drawing.Size(776, 67);
+            this.pnlRecipNav.Size = new System.Drawing.Size(1182, 67);
             this.pnlRecipNav.TabIndex = 0;
             // 
             // lblRecipNavTitle
             // 
             this.lblRecipNavTitle.AutoSize = true;
-            this.lblRecipNavTitle.Location = new System.Drawing.Point(45, 23);
+            this.lblRecipNavTitle.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecipNavTitle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblRecipNavTitle.Location = new System.Drawing.Point(446, 16);
             this.lblRecipNavTitle.Name = "lblRecipNavTitle";
-            this.lblRecipNavTitle.Size = new System.Drawing.Size(78, 16);
+            this.lblRecipNavTitle.Size = new System.Drawing.Size(201, 36);
             this.lblRecipNavTitle.TabIndex = 1;
             this.lblRecipNavTitle.Text = "Patient Lists";
             this.lblRecipNavTitle.Click += new System.EventHandler(this.lblRecipNavTitle_Click);
             // 
             // btnRecipLogout
             // 
-            this.btnRecipLogout.Location = new System.Drawing.Point(658, 18);
+            this.btnRecipLogout.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecipLogout.Location = new System.Drawing.Point(992, 12);
             this.btnRecipLogout.Name = "btnRecipLogout";
-            this.btnRecipLogout.Size = new System.Drawing.Size(75, 27);
+            this.btnRecipLogout.Size = new System.Drawing.Size(127, 40);
             this.btnRecipLogout.TabIndex = 0;
             this.btnRecipLogout.Text = "Logout";
             this.btnRecipLogout.UseVisualStyleBackColor = true;
             this.btnRecipLogout.Click += new System.EventHandler(this.btnRecipLogout_Click);
             // 
-            // pnlRecipContentBody
+            // dgvRecepPatientList
             // 
-            this.pnlRecipContentBody.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnlRecipContentBody.Location = new System.Drawing.Point(12, 135);
-            this.pnlRecipContentBody.Name = "pnlRecipContentBody";
-            this.pnlRecipContentBody.Size = new System.Drawing.Size(776, 254);
-            this.pnlRecipContentBody.TabIndex = 1;
+            this.dgvRecepPatientList.AllowUserToAddRows = false;
+            this.dgvRecepPatientList.AllowUserToDeleteRows = false;
+            this.dgvRecepPatientList.AllowUserToOrderColumns = true;
+            this.dgvRecepPatientList.AllowUserToResizeColumns = false;
+            this.dgvRecepPatientList.AllowUserToResizeRows = false;
+            this.dgvRecepPatientList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRecepPatientList.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.dgvRecepPatientList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dgvRecepPatientList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRecepPatientList.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvRecepPatientList.Location = new System.Drawing.Point(12, 138);
+            this.dgvRecepPatientList.MultiSelect = false;
+            this.dgvRecepPatientList.Name = "dgvRecepPatientList";
+            this.dgvRecepPatientList.ReadOnly = true;
+            this.dgvRecepPatientList.RowHeadersVisible = false;
+            this.dgvRecepPatientList.RowHeadersWidth = 51;
+            this.dgvRecepPatientList.RowTemplate.Height = 24;
+            this.dgvRecepPatientList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvRecepPatientList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRecepPatientList.Size = new System.Drawing.Size(1158, 444);
+            this.dgvRecepPatientList.TabIndex = 0;
+            this.dgvRecepPatientList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRecepPatientList_CellClick_1);
+            this.dgvRecepPatientList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRecepPatientList_CellContentClick);
             // 
-            // panel1
+            // pnlRecepFooter
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.btnRecipDeletePatient);
-            this.panel1.Controls.Add(this.btnRecipAddPatient);
-            this.panel1.Controls.Add(this.btnRecipUpdatePatient);
-            this.panel1.Location = new System.Drawing.Point(12, 395);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 43);
-            this.panel1.TabIndex = 2;
+            this.pnlRecepFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pnlRecepFooter.Controls.Add(this.btnRecipDeletePatient);
+            this.pnlRecepFooter.Controls.Add(this.btnRecipAddPatient);
+            this.pnlRecepFooter.Controls.Add(this.btnRecipUpdatePatient);
+            this.pnlRecepFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlRecepFooter.Location = new System.Drawing.Point(0, 588);
+            this.pnlRecepFooter.Name = "pnlRecepFooter";
+            this.pnlRecepFooter.Size = new System.Drawing.Size(1182, 65);
+            this.pnlRecepFooter.TabIndex = 2;
             // 
             // btnRecipDeletePatient
             // 
-            this.btnRecipDeletePatient.Location = new System.Drawing.Point(524, 8);
+            this.btnRecipDeletePatient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRecipDeletePatient.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecipDeletePatient.Location = new System.Drawing.Point(773, 15);
             this.btnRecipDeletePatient.Name = "btnRecipDeletePatient";
-            this.btnRecipDeletePatient.Size = new System.Drawing.Size(133, 27);
+            this.btnRecipDeletePatient.Size = new System.Drawing.Size(166, 36);
             this.btnRecipDeletePatient.TabIndex = 3;
             this.btnRecipDeletePatient.Text = "Delete Patient";
             this.btnRecipDeletePatient.UseVisualStyleBackColor = true;
@@ -107,9 +142,11 @@
             // 
             // btnRecipAddPatient
             // 
-            this.btnRecipAddPatient.Location = new System.Drawing.Point(112, 8);
+            this.btnRecipAddPatient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRecipAddPatient.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecipAddPatient.Location = new System.Drawing.Point(234, 14);
             this.btnRecipAddPatient.Name = "btnRecipAddPatient";
-            this.btnRecipAddPatient.Size = new System.Drawing.Size(154, 27);
+            this.btnRecipAddPatient.Size = new System.Drawing.Size(172, 38);
             this.btnRecipAddPatient.TabIndex = 2;
             this.btnRecipAddPatient.Text = "Add Patient";
             this.btnRecipAddPatient.UseVisualStyleBackColor = true;
@@ -117,9 +154,11 @@
             // 
             // btnRecipUpdatePatient
             // 
-            this.btnRecipUpdatePatient.Location = new System.Drawing.Point(337, 8);
+            this.btnRecipUpdatePatient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRecipUpdatePatient.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecipUpdatePatient.Location = new System.Drawing.Point(508, 15);
             this.btnRecipUpdatePatient.Name = "btnRecipUpdatePatient";
-            this.btnRecipUpdatePatient.Size = new System.Drawing.Size(144, 27);
+            this.btnRecipUpdatePatient.Size = new System.Drawing.Size(166, 37);
             this.btnRecipUpdatePatient.TabIndex = 1;
             this.btnRecipUpdatePatient.Text = "Update Patient";
             this.btnRecipUpdatePatient.UseVisualStyleBackColor = true;
@@ -127,63 +166,75 @@
             // 
             // pnlRecipFilter
             // 
-            this.pnlRecipFilter.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlRecipFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pnlRecipFilter.Controls.Add(this.lblRecipFilter);
-            this.pnlRecipFilter.Controls.Add(this.txtRecipFilter);
+            this.pnlRecipFilter.Controls.Add(this.txtRecipFilterSerial);
             this.pnlRecipFilter.Controls.Add(this.lblRecipFilterPhn);
             this.pnlRecipFilter.Controls.Add(this.txtRecipFilterPhn);
-            this.pnlRecipFilter.Location = new System.Drawing.Point(12, 85);
+            this.pnlRecipFilter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlRecipFilter.Location = new System.Drawing.Point(0, 67);
             this.pnlRecipFilter.Name = "pnlRecipFilter";
-            this.pnlRecipFilter.Size = new System.Drawing.Size(776, 44);
+            this.pnlRecipFilter.Size = new System.Drawing.Size(1182, 65);
             this.pnlRecipFilter.TabIndex = 3;
             // 
             // lblRecipFilter
             // 
             this.lblRecipFilter.AutoSize = true;
-            this.lblRecipFilter.Location = new System.Drawing.Point(312, 13);
+            this.lblRecipFilter.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecipFilter.Location = new System.Drawing.Point(678, 20);
             this.lblRecipFilter.Name = "lblRecipFilter";
-            this.lblRecipFilter.Size = new System.Drawing.Size(42, 16);
+            this.lblRecipFilter.Size = new System.Drawing.Size(113, 25);
             this.lblRecipFilter.TabIndex = 4;
-            this.lblRecipFilter.Text = "Serial";
+            this.lblRecipFilter.Text = "Patient ID";
             // 
-            // txtRecipFilter
+            // txtRecipFilterSerial
             // 
-            this.txtRecipFilter.Location = new System.Drawing.Point(364, 11);
-            this.txtRecipFilter.Name = "txtRecipFilter";
-            this.txtRecipFilter.Size = new System.Drawing.Size(100, 22);
-            this.txtRecipFilter.TabIndex = 3;
+            this.txtRecipFilterSerial.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRecipFilterSerial.Location = new System.Drawing.Point(797, 20);
+            this.txtRecipFilterSerial.Name = "txtRecipFilterSerial";
+            this.txtRecipFilterSerial.Size = new System.Drawing.Size(219, 29);
+            this.txtRecipFilterSerial.TabIndex = 3;
+            this.txtRecipFilterSerial.TextChanged += new System.EventHandler(this.txtRecipFilterSerial_TextChanged);
             // 
             // lblRecipFilterPhn
             // 
             this.lblRecipFilterPhn.AutoSize = true;
-            this.lblRecipFilterPhn.Location = new System.Drawing.Point(19, 12);
+            this.lblRecipFilterPhn.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecipFilterPhn.Location = new System.Drawing.Point(160, 19);
             this.lblRecipFilterPhn.Name = "lblRecipFilterPhn";
-            this.lblRecipFilterPhn.Size = new System.Drawing.Size(46, 16);
+            this.lblRecipFilterPhn.Size = new System.Drawing.Size(74, 25);
             this.lblRecipFilterPhn.TabIndex = 2;
             this.lblRecipFilterPhn.Text = "Phone";
             // 
             // txtRecipFilterPhn
             // 
-            this.txtRecipFilterPhn.Location = new System.Drawing.Point(71, 10);
+            this.txtRecipFilterPhn.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRecipFilterPhn.Location = new System.Drawing.Point(262, 19);
             this.txtRecipFilterPhn.Name = "txtRecipFilterPhn";
-            this.txtRecipFilterPhn.Size = new System.Drawing.Size(100, 22);
+            this.txtRecipFilterPhn.Size = new System.Drawing.Size(219, 29);
             this.txtRecipFilterPhn.TabIndex = 0;
+            this.txtRecipFilterPhn.TextChanged += new System.EventHandler(this.txtRecipFilterPhn_TextChanged);
             // 
             // ReceptionistDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1182, 653);
             this.Controls.Add(this.pnlRecipFilter);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlRecipContentBody);
+            this.Controls.Add(this.dgvRecepPatientList);
+            this.Controls.Add(this.pnlRecepFooter);
             this.Controls.Add(this.pnlRecipNav);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "ReceptionistDashboard";
             this.Text = "Receptionist Dashboard";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ReceptionistDashboard_FormClosing);
+            this.Shown += new System.EventHandler(this.ReceptionistDashboard_Shown);
             this.pnlRecipNav.ResumeLayout(false);
             this.pnlRecipNav.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecepPatientList)).EndInit();
+            this.pnlRecepFooter.ResumeLayout(false);
             this.pnlRecipFilter.ResumeLayout(false);
             this.pnlRecipFilter.PerformLayout();
             this.ResumeLayout(false);
@@ -195,15 +246,15 @@
         private System.Windows.Forms.Panel pnlRecipNav;
         private System.Windows.Forms.Label lblRecipNavTitle;
         private System.Windows.Forms.Button btnRecipLogout;
-        private System.Windows.Forms.Panel pnlRecipContentBody;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlRecepFooter;
         private System.Windows.Forms.Button btnRecipDeletePatient;
         private System.Windows.Forms.Button btnRecipAddPatient;
         private System.Windows.Forms.Button btnRecipUpdatePatient;
         private System.Windows.Forms.Panel pnlRecipFilter;
         private System.Windows.Forms.Label lblRecipFilter;
-        private System.Windows.Forms.TextBox txtRecipFilter;
+        private System.Windows.Forms.TextBox txtRecipFilterSerial;
         private System.Windows.Forms.Label lblRecipFilterPhn;
         private System.Windows.Forms.TextBox txtRecipFilterPhn;
+        private System.Windows.Forms.DataGridView dgvRecepPatientList;
     }
 }

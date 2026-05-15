@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Data;
+using System.Globalization;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Clinic_Management.AddingNew
@@ -8,7 +10,7 @@ namespace Clinic_Management.AddingNew
     {
         private AdminDashboard admindshRef;
         private string operationType;
-        private int updateId;
+        private int updateId =-1;
 
         private DataAccess da = new DataAccess();
 
@@ -23,6 +25,7 @@ namespace Clinic_Management.AddingNew
             {
                 LoadExistingDoctorData();
             }
+            this.StartPosition = FormStartPosition.CenterScreen;
 
         }
 
@@ -45,7 +48,7 @@ namespace Clinic_Management.AddingNew
                 txtAddUpdateDocEmail.Text = dt.Rows[0]["Email"].ToString();
                 txtAddUpdateDocPhn.Text = dt.Rows[0]["Phone"].ToString();
                 txtAddUpdateDocSpecialist.Text = dt.Rows[0]["Specialist"].ToString();
-                txtAddUpdateDocSchedule.Text = dt.Rows[0]["Schedule"].ToString();
+                cmbDocScheduleList.Text = dt.Rows[0]["Schedule"].ToString();
                 txtAddUpdateDocPass.Text = dt.Rows[0]["Password"].ToString();
             }
             else
@@ -55,11 +58,17 @@ namespace Clinic_Management.AddingNew
         }
 
         // ================= BACK =================
-        private void BackToAdminDashboard(object sender, EventArgs e)
+        private void BackToAdminDashboard()
         {
-            admindshRef.Show();
+            
             this.Close();
         }
+
+
+
+
+
+
 
         // ================= SAVE BUTTON =================
         private void btnAddUpdateRecipSave_Click(object sender, EventArgs e)
@@ -67,19 +76,46 @@ namespace Clinic_Management.AddingNew
             string Doc_Name = txtAddUpdateDocName.Text;
             string Doc_Email = txtAddUpdateDocEmail.Text;
             string Doc_Password = txtAddUpdateDocPass.Text;
-            string Doc_Specialist = txtAddUpdateDocSpecialist.Text;
+            
+            string specialist = txtAddUpdateDocSpecialist.Text.Trim();
+            string Doc_Specialist = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(specialist.ToLower());
             string Doc_Phone = txtAddUpdateDocPhn.Text;
-            string Doc_Schedule = txtAddUpdateDocSchedule.Text;
+            string Doc_Schedule="";
+
+            if (cmbDocScheduleList.SelectedItem != null)
+            {
+                Doc_Schedule = cmbDocScheduleList.SelectedItem.ToString();
+
+            }
+
 
             if (Doc_Name == "" || Doc_Email == "" || Doc_Password == "" ||
-                Doc_Specialist == "" || Doc_Phone == "" || Doc_Schedule == "")
+                Doc_Specialist == "" || Doc_Phone == "" )
             {
                 MessageBox.Show("Please fill in all fields.");
                 return;
             }
 
+
+
+            UtilityFunction UF = new UtilityFunction();
+            if (!UF.NameValidation(Doc_Name) || !UF.EmailValidation(Doc_Email) ||
+                !UF.PasswordValidation(Doc_Password) || !UF.SpecialistValidation(Doc_Specialist) ||
+                !UF.PhoneValidation(Doc_Phone))
+            {
+                return;
+            }
+
+
+            if (!UF.IsEmailUnique(Doc_Email, updateId, "Doctor", "DoctorId"))
+            {
+                MessageBox.Show("Email already exists. Please use a different email.");
+                return;
+            }
+
             if (operationType == "addNew")
             {
+                                
                 string sql = "INSERT INTO Doctor (Name, Phone, Email, Specialist, Schedule, Password) " +
                              "VALUES ('" + Doc_Name + "', '" + Doc_Phone + "', '" + Doc_Email + "', '" +
                              Doc_Specialist + "', '" + Doc_Schedule + "', '" + Doc_Password + "')";
@@ -93,6 +129,7 @@ namespace Clinic_Management.AddingNew
             }
             else if (operationType == "update")
             {
+                
                 string sql = "UPDATE Doctor SET " +
                              "Name='" + Doc_Name + "', " +
                              "Phone='" + Doc_Phone + "', " +
@@ -110,18 +147,24 @@ namespace Clinic_Management.AddingNew
                     MessageBox.Show("Update failed!");
             }
 
-            BackToAdminDashboard(sender, e);
+            BackToAdminDashboard();
         }
 
         // ================= CANCEL =================
         private void btnAddUpdateRecipCancel_Click(object sender, EventArgs e)
         {
-            BackToAdminDashboard(sender, e);
+            BackToAdminDashboard();
         }
 
         // optional (ignore)
         private void lblAddupdateRecipInfoTitle_Click(object sender, EventArgs e)
         {
         }
+
+        private void pnlAddUpdateRecipFooter_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
     }
 }

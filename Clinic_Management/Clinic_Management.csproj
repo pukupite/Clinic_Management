@@ -109,6 +109,7 @@
     <Compile Include="RecipPatientManage.Designer.cs">
       <DependentUpon>RecipPatientManage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UtilityFunction.cs" />
     <EmbeddedResource Include="AddingNew\AddUpdateAdmin.resx">
       <DependentUpon>AddUpdateAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +139,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ReceptionistDashboard.resx">
       <DependentUpon>ReceptionistDashboard.cs</DependentUpon>
@@ -157,6 +159,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clinic_login_img.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clinic_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clinic_icon-Photoroom.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddUpdateReciptionist));
             this.pnlAddUpdateRecipFooter = new System.Windows.Forms.Panel();
             this.btnAddUpdateRecipSave = new System.Windows.Forms.Button();
             this.btnAddUpdateRecipCancel = new System.Windows.Forms.Button();
@@ -49,38 +50,44 @@
             // 
             // pnlAddUpdateRecipFooter
             // 
-            this.pnlAddUpdateRecipFooter.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlAddUpdateRecipFooter.BackColor = System.Drawing.Color.CadetBlue;
             this.pnlAddUpdateRecipFooter.Controls.Add(this.btnAddUpdateRecipSave);
             this.pnlAddUpdateRecipFooter.Controls.Add(this.btnAddUpdateRecipCancel);
             this.pnlAddUpdateRecipFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlAddUpdateRecipFooter.Location = new System.Drawing.Point(0, 400);
+            this.pnlAddUpdateRecipFooter.Location = new System.Drawing.Point(0, 573);
             this.pnlAddUpdateRecipFooter.Name = "pnlAddUpdateRecipFooter";
-            this.pnlAddUpdateRecipFooter.Size = new System.Drawing.Size(779, 50);
+            this.pnlAddUpdateRecipFooter.Size = new System.Drawing.Size(1182, 80);
             this.pnlAddUpdateRecipFooter.TabIndex = 0;
             // 
             // btnAddUpdateRecipSave
             // 
-            this.btnAddUpdateRecipSave.Location = new System.Drawing.Point(388, 10);
+            this.btnAddUpdateRecipSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAddUpdateRecipSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddUpdateRecipSave.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddUpdateRecipSave.Location = new System.Drawing.Point(621, 19);
             this.btnAddUpdateRecipSave.Name = "btnAddUpdateRecipSave";
-            this.btnAddUpdateRecipSave.Size = new System.Drawing.Size(138, 33);
+            this.btnAddUpdateRecipSave.Size = new System.Drawing.Size(157, 39);
             this.btnAddUpdateRecipSave.TabIndex = 1;
             this.btnAddUpdateRecipSave.Text = "Save";
-            this.btnAddUpdateRecipSave.UseVisualStyleBackColor = true;
+            this.btnAddUpdateRecipSave.UseVisualStyleBackColor = false;
             this.btnAddUpdateRecipSave.Click += new System.EventHandler(this.btnAddUpdateRecipSave_Click);
             // 
             // btnAddUpdateRecipCancel
             // 
-            this.btnAddUpdateRecipCancel.Location = new System.Drawing.Point(220, 10);
+            this.btnAddUpdateRecipCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAddUpdateRecipCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddUpdateRecipCancel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddUpdateRecipCancel.Location = new System.Drawing.Point(419, 19);
             this.btnAddUpdateRecipCancel.Name = "btnAddUpdateRecipCancel";
-            this.btnAddUpdateRecipCancel.Size = new System.Drawing.Size(131, 34);
+            this.btnAddUpdateRecipCancel.Size = new System.Drawing.Size(150, 40);
             this.btnAddUpdateRecipCancel.TabIndex = 0;
             this.btnAddUpdateRecipCancel.Text = "Cancel";
-            this.btnAddUpdateRecipCancel.UseVisualStyleBackColor = true;
+            this.btnAddUpdateRecipCancel.UseVisualStyleBackColor = false;
             this.btnAddUpdateRecipCancel.Click += new System.EventHandler(this.btnAddUpdateRecipCancel_Click);
             // 
             // pnlAddUpdateRecipBody
             // 
-            this.pnlAddUpdateRecipBody.BackColor = System.Drawing.SystemColors.Info;
+            this.pnlAddUpdateRecipBody.BackColor = System.Drawing.Color.AliceBlue;
             this.pnlAddUpdateRecipBody.Controls.Add(this.txtAddUpdateRecipPhn);
             this.pnlAddUpdateRecipBody.Controls.Add(this.txtAddUpdateRecipNID);
             this.pnlAddUpdateRecipBody.Controls.Add(this.txtAddUpdateRecipPass);
@@ -95,50 +102,57 @@
             this.pnlAddUpdateRecipBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAddUpdateRecipBody.Location = new System.Drawing.Point(0, 0);
             this.pnlAddUpdateRecipBody.Name = "pnlAddUpdateRecipBody";
-            this.pnlAddUpdateRecipBody.Size = new System.Drawing.Size(779, 400);
+            this.pnlAddUpdateRecipBody.Size = new System.Drawing.Size(1182, 573);
             this.pnlAddUpdateRecipBody.TabIndex = 1;
+            this.pnlAddUpdateRecipBody.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAddUpdateRecipBody_Paint);
             // 
             // txtAddUpdateRecipPhn
             // 
-            this.txtAddUpdateRecipPhn.Location = new System.Drawing.Point(316, 306);
+            this.txtAddUpdateRecipPhn.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddUpdateRecipPhn.Location = new System.Drawing.Point(555, 412);
             this.txtAddUpdateRecipPhn.Name = "txtAddUpdateRecipPhn";
-            this.txtAddUpdateRecipPhn.Size = new System.Drawing.Size(306, 22);
+            this.txtAddUpdateRecipPhn.Size = new System.Drawing.Size(306, 29);
             this.txtAddUpdateRecipPhn.TabIndex = 10;
             // 
             // txtAddUpdateRecipNID
             // 
-            this.txtAddUpdateRecipNID.Location = new System.Drawing.Point(316, 245);
+            this.txtAddUpdateRecipNID.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddUpdateRecipNID.Location = new System.Drawing.Point(555, 351);
             this.txtAddUpdateRecipNID.Name = "txtAddUpdateRecipNID";
-            this.txtAddUpdateRecipNID.Size = new System.Drawing.Size(306, 22);
+            this.txtAddUpdateRecipNID.Size = new System.Drawing.Size(306, 29);
             this.txtAddUpdateRecipNID.TabIndex = 9;
             // 
             // txtAddUpdateRecipPass
             // 
-            this.txtAddUpdateRecipPass.Location = new System.Drawing.Point(316, 182);
+            this.txtAddUpdateRecipPass.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddUpdateRecipPass.Location = new System.Drawing.Point(555, 288);
             this.txtAddUpdateRecipPass.Name = "txtAddUpdateRecipPass";
-            this.txtAddUpdateRecipPass.Size = new System.Drawing.Size(306, 22);
+            this.txtAddUpdateRecipPass.Size = new System.Drawing.Size(306, 29);
             this.txtAddUpdateRecipPass.TabIndex = 8;
             // 
             // txtAddUpdateRecipEmail
             // 
-            this.txtAddUpdateRecipEmail.Location = new System.Drawing.Point(316, 121);
+            this.txtAddUpdateRecipEmail.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddUpdateRecipEmail.Location = new System.Drawing.Point(555, 227);
             this.txtAddUpdateRecipEmail.Name = "txtAddUpdateRecipEmail";
-            this.txtAddUpdateRecipEmail.Size = new System.Drawing.Size(306, 22);
+            this.txtAddUpdateRecipEmail.Size = new System.Drawing.Size(306, 29);
             this.txtAddUpdateRecipEmail.TabIndex = 7;
             // 
             // txtAddUpdateRecipName
             // 
-            this.txtAddUpdateRecipName.Location = new System.Drawing.Point(316, 67);
+            this.txtAddUpdateRecipName.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddUpdateRecipName.Location = new System.Drawing.Point(555, 173);
             this.txtAddUpdateRecipName.Name = "txtAddUpdateRecipName";
-            this.txtAddUpdateRecipName.Size = new System.Drawing.Size(306, 22);
+            this.txtAddUpdateRecipName.Size = new System.Drawing.Size(306, 29);
             this.txtAddUpdateRecipName.TabIndex = 6;
             // 
             // lblAddUpdateRecipName
             // 
             this.lblAddUpdateRecipName.AutoSize = true;
-            this.lblAddUpdateRecipName.Location = new System.Drawing.Point(131, 67);
+            this.lblAddUpdateRecipName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddUpdateRecipName.Location = new System.Drawing.Point(370, 173);
             this.lblAddUpdateRecipName.Name = "lblAddUpdateRecipName";
-            this.lblAddUpdateRecipName.Size = new System.Drawing.Size(44, 16);
+            this.lblAddUpdateRecipName.Size = new System.Drawing.Size(70, 25);
             this.lblAddUpdateRecipName.TabIndex = 5;
             this.lblAddUpdateRecipName.Text = "Name";
             this.lblAddUpdateRecipName.Click += new System.EventHandler(this.label5_Click);
@@ -146,27 +160,30 @@
             // lblAddUpdateRecipEmail
             // 
             this.lblAddUpdateRecipEmail.AutoSize = true;
-            this.lblAddUpdateRecipEmail.Location = new System.Drawing.Point(131, 124);
+            this.lblAddUpdateRecipEmail.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddUpdateRecipEmail.Location = new System.Drawing.Point(370, 230);
             this.lblAddUpdateRecipEmail.Name = "lblAddUpdateRecipEmail";
-            this.lblAddUpdateRecipEmail.Size = new System.Drawing.Size(41, 16);
+            this.lblAddUpdateRecipEmail.Size = new System.Drawing.Size(68, 25);
             this.lblAddUpdateRecipEmail.TabIndex = 4;
             this.lblAddUpdateRecipEmail.Text = "Email";
             // 
             // lblAddUpdateRecipPass
             // 
             this.lblAddUpdateRecipPass.AutoSize = true;
-            this.lblAddUpdateRecipPass.Location = new System.Drawing.Point(131, 188);
+            this.lblAddUpdateRecipPass.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddUpdateRecipPass.Location = new System.Drawing.Point(370, 294);
             this.lblAddUpdateRecipPass.Name = "lblAddUpdateRecipPass";
-            this.lblAddUpdateRecipPass.Size = new System.Drawing.Size(67, 16);
+            this.lblAddUpdateRecipPass.Size = new System.Drawing.Size(105, 25);
             this.lblAddUpdateRecipPass.TabIndex = 3;
             this.lblAddUpdateRecipPass.Text = "Password";
             // 
             // lblAddUpdateRecipNID
             // 
             this.lblAddUpdateRecipNID.AutoSize = true;
-            this.lblAddUpdateRecipNID.Location = new System.Drawing.Point(131, 251);
+            this.lblAddUpdateRecipNID.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddUpdateRecipNID.Location = new System.Drawing.Point(370, 357);
             this.lblAddUpdateRecipNID.Name = "lblAddUpdateRecipNID";
-            this.lblAddUpdateRecipNID.Size = new System.Drawing.Size(81, 16);
+            this.lblAddUpdateRecipNID.Size = new System.Drawing.Size(137, 25);
             this.lblAddUpdateRecipNID.TabIndex = 2;
             this.lblAddUpdateRecipNID.Text = "NID Number";
             this.lblAddUpdateRecipNID.Click += new System.EventHandler(this.label2_Click);
@@ -174,18 +191,21 @@
             // lblAddUpdateRecipPhn
             // 
             this.lblAddUpdateRecipPhn.AutoSize = true;
-            this.lblAddUpdateRecipPhn.Location = new System.Drawing.Point(131, 312);
+            this.lblAddUpdateRecipPhn.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddUpdateRecipPhn.Location = new System.Drawing.Point(370, 418);
             this.lblAddUpdateRecipPhn.Name = "lblAddUpdateRecipPhn";
-            this.lblAddUpdateRecipPhn.Size = new System.Drawing.Size(97, 16);
+            this.lblAddUpdateRecipPhn.Size = new System.Drawing.Size(161, 25);
             this.lblAddUpdateRecipPhn.TabIndex = 1;
             this.lblAddUpdateRecipPhn.Text = "Phone Number";
             // 
             // lblAddupdateRecipInfoTitle
             // 
             this.lblAddupdateRecipInfoTitle.AutoSize = true;
-            this.lblAddupdateRecipInfoTitle.Location = new System.Drawing.Point(290, 22);
+            this.lblAddupdateRecipInfoTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblAddupdateRecipInfoTitle.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddupdateRecipInfoTitle.Location = new System.Drawing.Point(443, 95);
             this.lblAddupdateRecipInfoTitle.Name = "lblAddupdateRecipInfoTitle";
-            this.lblAddupdateRecipInfoTitle.Size = new System.Drawing.Size(121, 16);
+            this.lblAddupdateRecipInfoTitle.Size = new System.Drawing.Size(346, 42);
             this.lblAddupdateRecipInfoTitle.TabIndex = 0;
             this.lblAddupdateRecipInfoTitle.Text = "Fill Reciptionist Info";
             this.lblAddupdateRecipInfoTitle.Click += new System.EventHandler(this.lblAddupdateRecipInfoTitle_Click);
@@ -194,9 +214,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 450);
+            this.ClientSize = new System.Drawing.Size(1182, 653);
             this.Controls.Add(this.pnlAddUpdateRecipBody);
             this.Controls.Add(this.pnlAddUpdateRecipFooter);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddUpdateReciptionist";
             this.Text = "Add-Update Reciptionist";
             this.pnlAddUpdateRecipFooter.ResumeLayout(false);

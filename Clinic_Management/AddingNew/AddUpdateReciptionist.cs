@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Data;
+using System.Linq;
+using System.Security.Cryptography;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Clinic_Management.AddingNew
 {
@@ -8,7 +12,7 @@ namespace Clinic_Management.AddingNew
     {
         private AdminDashboard admindshRef;
         private string operationType;
-        private int updateId;
+        private int updateId=-1;
 
         private DataAccess da = new DataAccess();
 
@@ -24,6 +28,7 @@ namespace Clinic_Management.AddingNew
             {
                 LoadExistingReciptionistData();
             }
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         
@@ -51,12 +56,14 @@ namespace Clinic_Management.AddingNew
 
 
         // ================= BACK =================
-        private void BackToAdminDashboard(object sender, EventArgs e)
+        private void BackToAdminDashboard()
         {
-            admindshRef.Show();
             this.Close();
         }
 
+
+
+   
         // ================= SAVE BUTTON =================
         private void btnAddUpdateRecipSave_Click(object sender, EventArgs e)
         {
@@ -73,11 +80,29 @@ namespace Clinic_Management.AddingNew
                 return;
             }
 
+            UtilityFunction UF = new UtilityFunction();
+            if (!UF.NameValidation(Recip_Name) || !UF.EmailValidation(Recip_Email) ||
+                !UF.PasswordValidation(Recip_Password) || !UF.NIDValidation(Recip_NID) ||
+                !UF.PhoneValidation(Recip_Phone))
+            {
+                return;
+            }
+
+
+            if (!UF.IsEmailUnique(Recip_Email, updateId, "Reciptionist", "ReciptionistId"))
+            {
+                MessageBox.Show("Email already Exists. Please use a different email.");
+                return;
+            }
+
+
+
             if (operationType == "addNew")
             {
-                string sql = "INSERT INTO Reciptionist (Name, Email, NID, Phone, Password) " +
-                             "VALUES ('" + Recip_Name + "', '" + Recip_Email + "', '" +
-                             Recip_NID + "', '" + Recip_Phone + "', '" + Recip_Password + "')";
+                            
+                 string sql = "INSERT INTO Reciptionist (Name, Email, NID, Phone, Password) " +
+                 "VALUES ('" + Recip_Name + "', '" + Recip_Email + "', '" +
+                  Recip_NID + "', '" + Recip_Phone + "', '" + Recip_Password + "')";
 
                 int result = da.ExecuteUpdateQuery(sql);
 
@@ -86,6 +111,8 @@ namespace Clinic_Management.AddingNew
                 else
                     MessageBox.Show("Insert failed!");
             }
+
+
             else if (operationType == "update")
             {
                 string sql = "UPDATE Reciptionist SET " +
@@ -104,13 +131,13 @@ namespace Clinic_Management.AddingNew
                     MessageBox.Show("Update failed!");
             }
 
-            BackToAdminDashboard(sender, e);
+            BackToAdminDashboard();
         }
 
         // ================= CANCEL =================
         private void btnAddUpdateRecipCancel_Click(object sender, EventArgs e)
         {
-            BackToAdminDashboard(sender, e);
+            BackToAdminDashboard();
         }
 
         private void lblAddupdateRecipInfoTitle_Click(object sender, EventArgs e)
@@ -128,6 +155,13 @@ namespace Clinic_Management.AddingNew
         {
             // do nothing
         }
+
+        private void pnlAddUpdateRecipBody_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
 
 
     }

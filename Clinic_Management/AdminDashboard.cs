@@ -20,7 +20,7 @@ namespace Clinic_Management
         {
             this.loginPageRef = loginPageRef;
             InitializeComponent();
-            this.lblAdminNavTitle.Text= "Welcome to Dashboard";
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void pnlAdminSidebarDashboard_Paint(object sender, PaintEventArgs e)

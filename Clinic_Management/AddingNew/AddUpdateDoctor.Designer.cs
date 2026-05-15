@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddUpdateDoctor));
             this.pnlAddUpdateRecipBody = new System.Windows.Forms.Panel();
+            this.lblAddUpdateDocSchedule = new System.Windows.Forms.Label();
             this.txtAddUpdateDocPhn = new System.Windows.Forms.TextBox();
             this.txtAddUpdateDocSpecialist = new System.Windows.Forms.TextBox();
             this.txtAddUpdateDocPass = new System.Windows.Forms.TextBox();
@@ -43,16 +45,15 @@
             this.pnlAddUpdateRecipFooter = new System.Windows.Forms.Panel();
             this.btnAddUpdateDocSave = new System.Windows.Forms.Button();
             this.btnAddUpdateDocCancel = new System.Windows.Forms.Button();
-            this.txtAddUpdateDocSchedule = new System.Windows.Forms.TextBox();
-            this.lblAddUpdateDocSchedule = new System.Windows.Forms.Label();
+            this.cmbDocScheduleList = new System.Windows.Forms.ComboBox();
             this.pnlAddUpdateRecipBody.SuspendLayout();
             this.pnlAddUpdateRecipFooter.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlAddUpdateRecipBody
             // 
-            this.pnlAddUpdateRecipBody.BackColor = System.Drawing.SystemColors.Info;
-            this.pnlAddUpdateRecipBody.Controls.Add(this.txtAddUpdateDocSchedule);
+            this.pnlAddUpdateRecipBody.BackColor = System.Drawing.Color.AliceBlue;
+            this.pnlAddUpdateRecipBody.Controls.Add(this.cmbDocScheduleList);
             this.pnlAddUpdateRecipBody.Controls.Add(this.lblAddUpdateDocSchedule);
             this.pnlAddUpdateRecipBody.Controls.Add(this.txtAddUpdateDocPhn);
             this.pnlAddUpdateRecipBody.Controls.Add(this.txtAddUpdateDocSpecialist);
@@ -68,153 +69,188 @@
             this.pnlAddUpdateRecipBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAddUpdateRecipBody.Location = new System.Drawing.Point(0, 0);
             this.pnlAddUpdateRecipBody.Name = "pnlAddUpdateRecipBody";
-            this.pnlAddUpdateRecipBody.Size = new System.Drawing.Size(800, 400);
+            this.pnlAddUpdateRecipBody.Size = new System.Drawing.Size(1182, 568);
             this.pnlAddUpdateRecipBody.TabIndex = 3;
+            // 
+            // lblAddUpdateDocSchedule
+            // 
+            this.lblAddUpdateDocSchedule.AutoSize = true;
+            this.lblAddUpdateDocSchedule.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddUpdateDocSchedule.Location = new System.Drawing.Point(354, 426);
+            this.lblAddUpdateDocSchedule.Name = "lblAddUpdateDocSchedule";
+            this.lblAddUpdateDocSchedule.Size = new System.Drawing.Size(104, 25);
+            this.lblAddUpdateDocSchedule.TabIndex = 11;
+            this.lblAddUpdateDocSchedule.Text = "Schedule";
             // 
             // txtAddUpdateDocPhn
             // 
-            this.txtAddUpdateDocPhn.Location = new System.Drawing.Point(316, 290);
+            this.txtAddUpdateDocPhn.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddUpdateDocPhn.Location = new System.Drawing.Point(539, 363);
             this.txtAddUpdateDocPhn.Name = "txtAddUpdateDocPhn";
-            this.txtAddUpdateDocPhn.Size = new System.Drawing.Size(306, 22);
+            this.txtAddUpdateDocPhn.Size = new System.Drawing.Size(306, 29);
             this.txtAddUpdateDocPhn.TabIndex = 10;
             // 
             // txtAddUpdateDocSpecialist
             // 
-            this.txtAddUpdateDocSpecialist.Location = new System.Drawing.Point(316, 228);
+            this.txtAddUpdateDocSpecialist.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddUpdateDocSpecialist.Location = new System.Drawing.Point(539, 301);
             this.txtAddUpdateDocSpecialist.Name = "txtAddUpdateDocSpecialist";
-            this.txtAddUpdateDocSpecialist.Size = new System.Drawing.Size(306, 22);
+            this.txtAddUpdateDocSpecialist.Size = new System.Drawing.Size(306, 29);
             this.txtAddUpdateDocSpecialist.TabIndex = 9;
             // 
             // txtAddUpdateDocPass
             // 
-            this.txtAddUpdateDocPass.Location = new System.Drawing.Point(316, 170);
+            this.txtAddUpdateDocPass.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddUpdateDocPass.Location = new System.Drawing.Point(539, 243);
             this.txtAddUpdateDocPass.Name = "txtAddUpdateDocPass";
-            this.txtAddUpdateDocPass.Size = new System.Drawing.Size(306, 22);
+            this.txtAddUpdateDocPass.Size = new System.Drawing.Size(306, 29);
             this.txtAddUpdateDocPass.TabIndex = 8;
             // 
             // txtAddUpdateDocEmail
             // 
-            this.txtAddUpdateDocEmail.Location = new System.Drawing.Point(316, 117);
+            this.txtAddUpdateDocEmail.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddUpdateDocEmail.Location = new System.Drawing.Point(539, 190);
             this.txtAddUpdateDocEmail.Name = "txtAddUpdateDocEmail";
-            this.txtAddUpdateDocEmail.Size = new System.Drawing.Size(306, 22);
+            this.txtAddUpdateDocEmail.Size = new System.Drawing.Size(306, 29);
             this.txtAddUpdateDocEmail.TabIndex = 7;
             // 
             // txtAddUpdateDocName
             // 
-            this.txtAddUpdateDocName.Location = new System.Drawing.Point(316, 67);
+            this.txtAddUpdateDocName.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddUpdateDocName.Location = new System.Drawing.Point(539, 140);
             this.txtAddUpdateDocName.Name = "txtAddUpdateDocName";
-            this.txtAddUpdateDocName.Size = new System.Drawing.Size(306, 22);
+            this.txtAddUpdateDocName.Size = new System.Drawing.Size(306, 29);
             this.txtAddUpdateDocName.TabIndex = 6;
             // 
             // lblAddUpdateDocName
             // 
             this.lblAddUpdateDocName.AutoSize = true;
-            this.lblAddUpdateDocName.Location = new System.Drawing.Point(131, 67);
+            this.lblAddUpdateDocName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddUpdateDocName.Location = new System.Drawing.Point(354, 136);
             this.lblAddUpdateDocName.Name = "lblAddUpdateDocName";
-            this.lblAddUpdateDocName.Size = new System.Drawing.Size(44, 16);
+            this.lblAddUpdateDocName.Size = new System.Drawing.Size(70, 25);
             this.lblAddUpdateDocName.TabIndex = 5;
             this.lblAddUpdateDocName.Text = "Name";
             // 
             // lblAddUpdateDocEmail
             // 
             this.lblAddUpdateDocEmail.AutoSize = true;
-            this.lblAddUpdateDocEmail.Location = new System.Drawing.Point(131, 120);
+            this.lblAddUpdateDocEmail.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddUpdateDocEmail.Location = new System.Drawing.Point(354, 189);
             this.lblAddUpdateDocEmail.Name = "lblAddUpdateDocEmail";
-            this.lblAddUpdateDocEmail.Size = new System.Drawing.Size(41, 16);
+            this.lblAddUpdateDocEmail.Size = new System.Drawing.Size(68, 25);
             this.lblAddUpdateDocEmail.TabIndex = 4;
             this.lblAddUpdateDocEmail.Text = "Email";
             // 
             // lblAddUpdateDocPass
             // 
             this.lblAddUpdateDocPass.AutoSize = true;
-            this.lblAddUpdateDocPass.Location = new System.Drawing.Point(131, 176);
+            this.lblAddUpdateDocPass.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddUpdateDocPass.Location = new System.Drawing.Point(354, 245);
             this.lblAddUpdateDocPass.Name = "lblAddUpdateDocPass";
-            this.lblAddUpdateDocPass.Size = new System.Drawing.Size(67, 16);
+            this.lblAddUpdateDocPass.Size = new System.Drawing.Size(105, 25);
             this.lblAddUpdateDocPass.TabIndex = 3;
             this.lblAddUpdateDocPass.Text = "Password";
             // 
             // lblAddUpdateDocSpecialist
             // 
             this.lblAddUpdateDocSpecialist.AutoSize = true;
-            this.lblAddUpdateDocSpecialist.Location = new System.Drawing.Point(131, 234);
+            this.lblAddUpdateDocSpecialist.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddUpdateDocSpecialist.Location = new System.Drawing.Point(354, 303);
             this.lblAddUpdateDocSpecialist.Name = "lblAddUpdateDocSpecialist";
-            this.lblAddUpdateDocSpecialist.Size = new System.Drawing.Size(66, 16);
+            this.lblAddUpdateDocSpecialist.Size = new System.Drawing.Size(108, 25);
             this.lblAddUpdateDocSpecialist.TabIndex = 2;
             this.lblAddUpdateDocSpecialist.Text = "Specialist";
             // 
             // lblAddUpdateDocPhn
             // 
             this.lblAddUpdateDocPhn.AutoSize = true;
-            this.lblAddUpdateDocPhn.Location = new System.Drawing.Point(131, 296);
+            this.lblAddUpdateDocPhn.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddUpdateDocPhn.Location = new System.Drawing.Point(354, 365);
             this.lblAddUpdateDocPhn.Name = "lblAddUpdateDocPhn";
-            this.lblAddUpdateDocPhn.Size = new System.Drawing.Size(97, 16);
+            this.lblAddUpdateDocPhn.Size = new System.Drawing.Size(161, 25);
             this.lblAddUpdateDocPhn.TabIndex = 1;
             this.lblAddUpdateDocPhn.Text = "Phone Number";
             // 
             // lblAddupdateDocInfoTitle
             // 
             this.lblAddupdateDocInfoTitle.AutoSize = true;
-            this.lblAddupdateDocInfoTitle.Location = new System.Drawing.Point(290, 22);
+            this.lblAddupdateDocInfoTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblAddupdateDocInfoTitle.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddupdateDocInfoTitle.Location = new System.Drawing.Point(473, 74);
             this.lblAddupdateDocInfoTitle.Name = "lblAddupdateDocInfoTitle";
-            this.lblAddupdateDocInfoTitle.Size = new System.Drawing.Size(91, 16);
+            this.lblAddupdateDocInfoTitle.Size = new System.Drawing.Size(244, 38);
             this.lblAddupdateDocInfoTitle.TabIndex = 0;
             this.lblAddupdateDocInfoTitle.Text = "Fill Doctor Info";
             this.lblAddupdateDocInfoTitle.Click += new System.EventHandler(this.lblAddupdateRecipInfoTitle_Click);
             // 
             // pnlAddUpdateRecipFooter
             // 
-            this.pnlAddUpdateRecipFooter.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlAddUpdateRecipFooter.BackColor = System.Drawing.Color.CadetBlue;
             this.pnlAddUpdateRecipFooter.Controls.Add(this.btnAddUpdateDocSave);
             this.pnlAddUpdateRecipFooter.Controls.Add(this.btnAddUpdateDocCancel);
             this.pnlAddUpdateRecipFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlAddUpdateRecipFooter.Location = new System.Drawing.Point(0, 400);
+            this.pnlAddUpdateRecipFooter.Location = new System.Drawing.Point(0, 568);
             this.pnlAddUpdateRecipFooter.Name = "pnlAddUpdateRecipFooter";
-            this.pnlAddUpdateRecipFooter.Size = new System.Drawing.Size(800, 50);
+            this.pnlAddUpdateRecipFooter.Size = new System.Drawing.Size(1182, 85);
             this.pnlAddUpdateRecipFooter.TabIndex = 2;
+            this.pnlAddUpdateRecipFooter.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAddUpdateRecipFooter_Paint);
             // 
             // btnAddUpdateDocSave
             // 
-            this.btnAddUpdateDocSave.Location = new System.Drawing.Point(388, 10);
+            this.btnAddUpdateDocSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAddUpdateDocSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddUpdateDocSave.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddUpdateDocSave.Location = new System.Drawing.Point(627, 21);
             this.btnAddUpdateDocSave.Name = "btnAddUpdateDocSave";
-            this.btnAddUpdateDocSave.Size = new System.Drawing.Size(138, 33);
+            this.btnAddUpdateDocSave.Size = new System.Drawing.Size(156, 39);
             this.btnAddUpdateDocSave.TabIndex = 1;
             this.btnAddUpdateDocSave.Text = "Save";
-            this.btnAddUpdateDocSave.UseVisualStyleBackColor = true;
+            this.btnAddUpdateDocSave.UseVisualStyleBackColor = false;
             this.btnAddUpdateDocSave.Click += new System.EventHandler(this.btnAddUpdateRecipSave_Click);
             // 
             // btnAddUpdateDocCancel
             // 
-            this.btnAddUpdateDocCancel.Location = new System.Drawing.Point(220, 10);
+            this.btnAddUpdateDocCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAddUpdateDocCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddUpdateDocCancel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddUpdateDocCancel.Location = new System.Drawing.Point(440, 20);
             this.btnAddUpdateDocCancel.Name = "btnAddUpdateDocCancel";
-            this.btnAddUpdateDocCancel.Size = new System.Drawing.Size(131, 34);
+            this.btnAddUpdateDocCancel.Size = new System.Drawing.Size(149, 40);
             this.btnAddUpdateDocCancel.TabIndex = 0;
             this.btnAddUpdateDocCancel.Text = "Cancel";
-            this.btnAddUpdateDocCancel.UseVisualStyleBackColor = true;
+            this.btnAddUpdateDocCancel.UseVisualStyleBackColor = false;
             this.btnAddUpdateDocCancel.Click += new System.EventHandler(this.btnAddUpdateRecipCancel_Click);
             // 
-            // txtAddUpdateDocSchedule
+            // cmbDocScheduleList
             // 
-            this.txtAddUpdateDocSchedule.Location = new System.Drawing.Point(316, 351);
-            this.txtAddUpdateDocSchedule.Name = "txtAddUpdateDocSchedule";
-            this.txtAddUpdateDocSchedule.Size = new System.Drawing.Size(306, 22);
-            this.txtAddUpdateDocSchedule.TabIndex = 12;
-            // 
-            // lblAddUpdateDocSchedule
-            // 
-            this.lblAddUpdateDocSchedule.AutoSize = true;
-            this.lblAddUpdateDocSchedule.Location = new System.Drawing.Point(131, 357);
-            this.lblAddUpdateDocSchedule.Name = "lblAddUpdateDocSchedule";
-            this.lblAddUpdateDocSchedule.Size = new System.Drawing.Size(64, 16);
-            this.lblAddUpdateDocSchedule.TabIndex = 11;
-            this.lblAddUpdateDocSchedule.Text = "Schedule";
+            this.cmbDocScheduleList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDocScheduleList.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDocScheduleList.FormattingEnabled = true;
+            this.cmbDocScheduleList.Items.AddRange(new object[] {
+            "Sun-Tue_9AM-12PM",
+            "Sun-Tue_2PM-4PM",
+            "Sun-Tue_3PM-7PM",
+            "Mon-Wed_9AM-1PM",
+            "Mon-Wed_2PM-6PM",
+            "Wed-Fri_10AM-2PM",
+            "Wed-Fri_3PM-7PM",
+            "Thu-Sat_9AM-12PM",
+            "Thu-Sat_2PM-5PM",
+            "Fri-Sun_4PM-8PM"});
+            this.cmbDocScheduleList.Location = new System.Drawing.Point(539, 426);
+            this.cmbDocScheduleList.Name = "cmbDocScheduleList";
+            this.cmbDocScheduleList.Size = new System.Drawing.Size(306, 30);
+            this.cmbDocScheduleList.TabIndex = 14;
             // 
             // AddUpdateDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1182, 653);
             this.Controls.Add(this.pnlAddUpdateRecipBody);
             this.Controls.Add(this.pnlAddUpdateRecipFooter);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddUpdateDoctor";
             this.Text = "Add-Update Doctor";
             this.pnlAddUpdateRecipBody.ResumeLayout(false);
@@ -241,7 +277,7 @@
         private System.Windows.Forms.Panel pnlAddUpdateRecipFooter;
         private System.Windows.Forms.Button btnAddUpdateDocSave;
         private System.Windows.Forms.Button btnAddUpdateDocCancel;
-        private System.Windows.Forms.TextBox txtAddUpdateDocSchedule;
         private System.Windows.Forms.Label lblAddUpdateDocSchedule;
+        private System.Windows.Forms.ComboBox cmbDocScheduleList;
     }
 }

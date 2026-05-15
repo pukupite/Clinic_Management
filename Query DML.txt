@@ -64,3 +64,26 @@ INSERT INTO Reciptionist (Name, Email, NID, Phone, Password)
 VALUES 
 ('Sumi Akter', 'sumi@gmail.com', '1990123456', '01711111111', '1234'),
 ('Mitu Rahman', 'mitu@gmail.com', '1990556677', '01822222222', 'abcd');
+
+USE ClinicDB;
+
+SELECT TABLE_NAME 
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_TYPE = 'BASE TABLE';
+
+
+
+CREATE TABLE Patient (
+    PatientID INT IDENTITY(1,1) PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Age VARCHAR(10),
+    Gender VARCHAR(20),
+    Weight VARCHAR(10),
+    Phone VARCHAR(20),
+    BloodGroup VARCHAR(10),
+    Status VARCHAR(20) DEFAULT 'Incomplete'
+);
+
+
+
+SELECT * FROM Patient;
